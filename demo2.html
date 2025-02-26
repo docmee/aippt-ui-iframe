@@ -17,7 +17,7 @@
           justify-content: center;
           align-items: center;
       }
-      #input_text, #input_file, #input_dataUrl, #input_outline {
+      #input_subject, #input_file, #input_dataUrl, #input_outline {
         display: none;
       }
       #container {
@@ -36,13 +36,19 @@
   </head>
   <body>
     <div style="text-align: center;padding: 5px;font-size: 14px">
-        <a href="/">返回</a>
+        <a href="/" style="text-decoration: none;">返回：示例一</a>
+        <div style="margin-top: 10px;">
+          说明：通过代码去干预iframe内容的方式生成PPT<br>
+          场景一：通过已有文本内容去生成PPT（根据内容）<br>
+          场景二：通过文件链接去生成PPT（根据文件链接）<br>
+          场景三：通过markdown大纲去生成PPT（导入大纲）
+        </div>
     </div>
     <!-- 通过代码控制PPT创建 -->
     <div class="input_div">
         <select id="selectType" style="margin-right: 8px" onchange="changeSelectType()">
           <option value="subject">根据主题</option>
-          <option value="text">根据内容</option>
+          <option value="text" selected>根据内容</option>
           <option value="file">根据文件</option>
           <option value="dataUrl">根据文件链接</option>
           <option value="outline">导入大纲</option>
